@@ -6,11 +6,6 @@ pipeline {
     stages {
 
         
-        stage('clean-mvn-package') {
-            steps {
-                sh 'mvn clean package'
-            }
-        }
 
         stage('rds-setup') {
             steps {
