@@ -1,21 +1,11 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'apache-maven-3.9.11'
-    }
+    
 
     stages {
 
-        stage('clean-repo') {
-            steps {
-                sh '''
-                    rm -rf ~/.m2/repository/*
-                    rm -rf /mnt/servers/apache-tomcat-10.1.48/webapps/LoginWebApp*
-                '''
-            }
-        }
-
+        
         stage('clean-mvn-package') {
             steps {
                 sh 'mvn clean package'
