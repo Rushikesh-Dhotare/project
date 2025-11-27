@@ -27,7 +27,7 @@ pipeline {
 
         stage('deploy') {
             steps {
-                sh 'cp target/LoginWebApp.war ~/servers/apache-tomcat-10.1.49/webapps/'
+                sh 'cp /root/project/target/LoginWebApp.war /mnt/servers/apache-tomcat-10.1.49/webapps/'
             }
         }
     }
